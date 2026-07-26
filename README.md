@@ -175,3 +175,21 @@ http://localhost:8501
 4. Read the generated summary.
 5. Ask questions related to the uploaded document.
 6. Receive AI-generated answers based on the document content.
+
+## 📸 Screenshots
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+### Upload PDF
+
+![Upload](screenshots/upload.png)
+
+### AI Generated Summary
+
+![Summary](screenshots/summary.png)
+
+### Question Answering
+
+![Question Answering](screenshots/qa.png)

@@ -17,3 +17,49 @@ This project uses Groq's Llama 3.3 model, LangChain, FAISS vector database, and 
 - 🔍 Semantic search using FAISS Vector Database
 - ⚡ Fast inference using Groq Llama 3.3
 - 🌐 Interactive Streamlit web interface
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend Programming |
+| Streamlit | Web Application Framework |
+| LangChain | LLM Orchestration |
+| Groq API | Large Language Model |
+| FAISS | Vector Database |
+| PyMuPDF | PDF Text Extraction |
+| Sentence Transformers | Text Embeddings |
+| python-dotenv | Environment Variable Management |
+
+---
+
+## 🏗️ System Architecture
+
+```
+                Upload PDF
+                     │
+                     ▼
+          PDF Text Extraction
+              (PyMuPDF)
+                     │
+                     ▼
+            Text Chunking
+                     │
+                     ▼
+     Sentence Transformer Embeddings
+                     │
+                     ▼
+            FAISS Vector Store
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+         ▼                       ▼
+ AI Summary Generation     Question Answering
+      (Groq LLM)            (RAG + LangChain)
+         │                       │
+         └───────────┬───────────┘
+                     ▼
+             Streamlit Interface
+```

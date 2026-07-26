@@ -63,3 +63,115 @@ This project uses Groq's Llama 3.3 model, LangChain, FAISS vector database, and 
                      ▼
              Streamlit Interface
 ```
+
+---
+
+# 📂 Project Structure
+
+```
+LegalDoc/
+│
+├── app.py                      # Streamlit application
+├── requirements.txt            # Project dependencies
+├── README.md                   # Project documentation
+├── .env.example                # Environment variables template
+│
+├── llm/
+│   ├── llm.py
+│   └── prompts.py
+│
+├── rag/
+│   ├── splitter.py
+│   ├── vector_store.py
+│   └── qa.py
+│
+├── services/
+│   └── analyzer.py
+│
+├── utils/
+│   └── pdf_reader.py
+│
+└── sample_documents/
+    ├── Service_Agreement.pdf
+    ├── Employment_Agreement.pdf
+    └── NDA.pdf
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/LegalDoc.git
+```
+
+Navigate to the project folder
+
+```bash
+cd LegalDoc
+```
+
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+source .venv/bin/activate
+```
+
+Install all dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a file named `.env`
+
+Add the following:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+```
+
+---
+
+# ▶️ Run the Project
+
+```bash
+streamlit run app.py
+```
+
+After launching, open:
+
+```
+http://localhost:8501
+```
+
+---
+
+# 📖 How to Use
+
+1. Launch the application.
+2. Upload a legal PDF document.
+3. Wait for the AI to process the document.
+4. Read the generated summary.
+5. Ask questions related to the uploaded document.
+6. Receive AI-generated answers based on the document content.
